@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script
+    src="https://code.jquery.com/jquery-3.6.1.slim.js"
+    integrity="sha256-tXm+sa1uzsbFnbXt8GJqsgi2Tw+m4BLGDof6eUPjbtk="
+    crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js"></script>
+
+    <script>
+        $(document).ready(function (){
+            $("#scr").click(function (){
+                $('html, body').animate({
+                    scrollTop: 500
+                }, 2000);
+            });
+        });
+    </script>
+    <link rel="stylesheet" href="style.css">
+    <script type ="module" src="./firebase.js"></script>
+    <script type = "module" src="./index.js"></script>
+    <title>TrashAI</title>
+</head>
+<body>
+    <center><h1>TrashAI</h1></center>
+    <div>
+        <img class="trash" src="./images/paper-waste.png" width="30">
+    </div>
+    <div class="cans"> 
+        <img src="./images/2891491.png" width="55">
+        <img src="./images/recycle can.png" width="65">
+        <img src="./images/compost.png" width="60">
+    </div>
+    <div id="home">
+        <a href="#" id="scr" class="scroll-down" address="true"></a>
+    </div>
+    <div id="second" class="row">
+        <div class="column" style="background-color:#475749;">
+            <center><h2>TRASH</h2></center>
+            <p id="numsTrash">Number of Items: </p>
+            <div class="meter red animate">
+                <span id="trashDepth" style="width: 50%"><span></span></span>
+            </div>
+        </div>
+        <div class="column" style="background-color:#353d4e;">
+            <center><h2>RECYCLE</h2></center>
+            <p id="numsRecycle">Number of Items: </p>
+            <div class="meter animate">
+                <span id="recycleDepth" style="width: 50%"><span></span></span>
+            </div>
+        </div>
+    </div>
+    </section>
+</body>
+</html>
